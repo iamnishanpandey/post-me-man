@@ -1,10 +1,13 @@
 import mongoose from "mongoose";
 
-const postSchema = new mongoose.Schema({
-  image: String,
-  imageFileId: String,
-  caption: String,
-});
+const postSchema = new mongoose.Schema(
+  {
+    image: String,
+    imageFileId: String,
+    caption: String,
+  },
+  { timestamps: true },
+);
 
 const postModel = mongoose.model("post", postSchema);
 
