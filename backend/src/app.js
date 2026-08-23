@@ -3,8 +3,10 @@ import multer from "multer";
 import { uploadFile, deleteFile } from "./services/storage.service.js";
 import postModel from "./models/post.model.js";
 import mongoose from "mongoose";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const upload = multer({ storage: multer.memoryStorage() });
